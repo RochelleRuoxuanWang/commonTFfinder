@@ -2,10 +2,12 @@ Package: commonTFfinder
 Type: Package
 Title: Find Common Transcription Factors and Binding Sites
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
+Authors@R: person("R", "Wang", email = "rochelle.wang@mail.utoronto.ca", role = c("aut", "cre"))
+Maintainer: R Wang <rochelle.wang@mail.utoronto.ca>
+Description: Identifies common transcription factor (TF) binding sites along with the associated TF from user provided ChIP-seq data.
     Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 7.1.2
+Roxygen: list(markdown = TRUE)
