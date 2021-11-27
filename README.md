@@ -30,8 +30,7 @@ ls("package:commonTFfinder")
 data(package = "commonTFfinder")
 ```
 
-The \*\* function extracts the class predictions from the models and
-appends them to a desired data set.  
+The \*\* function.  
 
 The package also contains an ChIP-seq data set cstest. Refer to package
 vignettes for more details.
