@@ -1,0 +1,16 @@
+citHeader("To cite commonTFfinder in publications use:")
+
+citEntry(
+  entry    = "Unpublished",
+  title    = "commonTFfinder: Find Common Transcription Factors and Binding Sites",
+  author   = "Ruoxuan Wang",
+  journal  = ,
+  year     = "2021",
+  volume   = ,
+  number   = ,
+  pages    = ,
+  url      = "https://github.com/RochelleRuoxuanWang/commonTFfinder",
+  textVersion = paste(
+"Wang, R. (2021) commonTFfinder: Find Common Transcription Factors and Binding Sites. Unpublished. URL https://github.com/RochelleRuoxuanWang/commonTFfinder"
+  )
+)
