@@ -13,12 +13,10 @@ OverlappingSites(chipset1, chipset2)
 data.}
 }
 \value{
-Returns a plot of ranges of sequence that have been identified
-in both sets of data
+Returns ranges of sequence present in both sets of data
 }
 \description{
-Plots information criteria values given numeric information criteria
-values.
+Overlap of ChIP-seq peaks, indicating possible binding sites.
 Developmental Notes:
 Use these packages once figure out problem
 importFrom BSgenome.Mmusculus.UCSC.mm8 BSgenome.Mmusculus.UCSC.mm8
@@ -28,9 +26,12 @@ importFrom BSgenome.Mmusculus.UCSC.mm9 BSgenome.Mmusculus.UCSC.mm9
 importFrom BSgenome.Mmusculus.UCSC.mm10 BSgenome.Mmusculus.UCSC.mm10
 }
 \examples{
-
+OverlappingSites(cstest$gfp, cstest$ctcf)
 
 }
 \references{
-
+Lawrence M, Huber W, Pagès H, Aboyoun P, Carlson M, Gentleman R, Morgan
+M, Carey V (2013). “Software for Computing and Annotating Genomic Ranges.”
+PLoS Computational Biology, 9. doi: 10.1371/journal.pcbi.1003118,
+http://www.ploscompbiol.org/article/info\%3Adoi\%2F10.1371\%2Fjournal.pcbi.1003118.
 }

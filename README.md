@@ -47,7 +47,7 @@ vignettes for more details.
 browseVignettes("commonTFfinder")
 ```
 
-![](./inst/extdata/ExampleImage.png)
+![](./inst/extdata/overview.png)
 
 ## Contributions
 

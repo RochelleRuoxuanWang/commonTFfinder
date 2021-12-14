@@ -24,5 +24,11 @@ CompareCoveragePlot(cstest$gfp, cstest$ctcf)
 
 }
 \references{
-Lawrence M, Huber W, Pagès H, Aboyoun P, Carlson M, Gentleman R, Morgan M, Carey V (2013). “Software for Computing and Annotating Genomic Ranges.” PLoS Computational Biology, 9. doi: 10.1371/journal.pcbi.1003118, http://www.ploscompbiol.org/article/info\%3Adoi\%2F10.1371\%2Fjournal.pcbi.1003118
+Lawrence M, Huber W, Pagès H, Aboyoun P, Carlson M, Gentleman R, Morgan
+M, Carey V (2013). “Software for Computing and Annotating Genomic Ranges.”
+PLoS Computational Biology, 9. doi: 10.1371/journal.pcbi.1003118,
+http://www.ploscompbiol.org/article/info\%3Adoi\%2F10.1371\%2Fjournal.pcbi.1003118.
+R Core Team (2021). R: A language and environment for statistical computing.
+R Foundation for Statistical Computing, Vienna, Austria. URL
+https://www.R-project.org/.
 }

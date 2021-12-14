@@ -1,7 +1,6 @@
 #' Find Overlap in Sequence Ranges
 #'
-#' Plots information criteria values given numeric information criteria
-#' values.
+#' Overlap of ChIP-seq peaks, indicating possible binding sites.
 #' Developmental Notes:
 #' Use these packages once figure out problem
 #' importFrom BSgenome.Mmusculus.UCSC.mm8 BSgenome.Mmusculus.UCSC.mm8
@@ -14,16 +13,20 @@
 #' @param chipset2 Another GRanges object representing a set of ChIPseq
 #'   data.
 #'
-#' @return Returns a plot of ranges of sequence that have been identified
-#'   in both sets of data
+#' @return Returns ranges of sequence present in both sets of data
 #'
 #' @examples
-#'
+#' OverlappingSites(cstest$gfp, cstest$ctcf)
 #'
 #' @references
+#' Lawrence M, Huber W, Pagès H, Aboyoun P, Carlson M, Gentleman R, Morgan
+#'   M, Carey V (2013). “Software for Computing and Annotating Genomic Ranges.”
+#'   PLoS Computational Biology, 9. doi: 10.1371/journal.pcbi.1003118,
+#'   http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003118.
 #'
 #' @export
 #' @import GenomicRanges
+#' @import valr
 #'
 OverlappingSites <- function(chipset1, chipset2) {
 
@@ -32,22 +35,21 @@ OverlappingSites <- function(chipset1, chipset2) {
   # BiocManager::install("biomaRt") also doesn't work
   # Note for future development
 
+  # number of overlaps
   table(!is.na(GenomicRanges::findOverlaps(cstest$gfp, cstest$ctcf, select="arbitrary")))
+
+  # other option
   GenomicRanges::countOverlaps(cstest$gfp, cstest$ctcf)
   overlap <- GenomicRanges::findOverlaps(cstest$gfp, cstest$ctcf)
   as.data.frame(overlap)[[1]] #queryHits
 
-  seqnames
-  gr1 <- as.data.frame(cstest$gfp)
+  # for each chromosome
   # transform example data from above to data.frame and add required column `"chrom"`
   gr1 <- as.data.frame(cstest$gfp) %>% mutate(chrom = "chr10") %>% select(chrom, start, end)
   gr2 <- as.data.frame(cstest$ctcf) %>% mutate(chrom = "chr10") %>% select(chrom, start, end)
-  valr::bed_intersect(gr1, gr2, suffix = c("_gr1", "_gr2"))
+  overlap <- valr::bed_intersect(gr1, gr2, suffix = c("_gr1", "_gr2"))
 
-  # and plot
-  valr::bed_glyph(bed_intersect(gr1, gr2))
-
-  return()
+  return(overlap)
 }
 
 # [END] written by Ruoxuan Wang
