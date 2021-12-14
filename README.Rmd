@@ -30,6 +30,10 @@ You can install the development version of commonTFfinder from [GitHub](https://
 devtools::install_github("RochelleRuoxuanWang/commonTFfinder")
 library("commonTFfinder")
 ```
+To run the Shiny app:
+``` r
+runTestingPackage()
+```
 
 ## Overview
 
@@ -45,6 +49,8 @@ The package also contains an ChIP-seq data set cstest. Refer to package vignette
 ``` r
 browseVignettes("commonTFfinder")
 ```
+
+![](./inst/extdata/ExampleImage.png)
 
 ## Contributions
 The author of the package is Rochelle (Ruoxuan) Wang. Other packages used include GenomicRanges

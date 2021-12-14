@@ -1,7 +1,7 @@
-#' Plot Overlap in Sequence Ranges
+#' Plot Common Binding Sites In
 #'
 #' Plots information criteria values given numeric information criteria
-#' values.
+#' values. This function requires some time to run.
 #'
 #' @param chipset1 A GRanges object representing a set of ChIPseq data.
 #' @param chipset2 Another GRanges object representing a set of ChIPseq
@@ -11,17 +11,24 @@
 #'   in both sets of data
 #'
 #' @examples
-#' RangeOverlapPlot(cstest$gfp, cstest$ctcf)
+#' CompareCoveragePlot(cstest$gfp, cstest$ctcf)
+#'
+#' @references
 #'
 #' @export
 #' @import graphics
 #' @import GenomicRanges
-RangeOverlapPlot <- function(chipset1, chipset2) {
+CompareCoveragePlot <- function(chipset1, chipset2, chromosome) {
 
   # plotting
-  covg = GenomicRanges::coverage(cstest$gfp)
-  covg_chr10 = covg[['chr10']]
-  plot(covg_chr10, type='l')
+  covg1 = GenomicRanges::coverage(cstest$gfp)
+  covg2 = GenomicRanges::coverage(cstest$ctcf)
+  covg1_chr = covg1[['chr10']]
+  covg2_chr = covg2[['chr10']]
+
+  par(mfrow = c(1, 2))
+  plot(covg1_chr, type='l') #takes really long to run
+  plot(covg2_chr, type='l')
   plotExample <- graphics::plot(unlist(infValues), type = "p",
                                 ylab = "Information Criteria Value",
                                 xlab = "Information Criterion",
@@ -31,13 +38,4 @@ RangeOverlapPlot <- function(chipset1, chipset2) {
                                  labels = c("BIC", "AIC"))
   return(plotAxis)
 }
-
-firstFunction <- function(argumentOne, argumentTwo) {
-  cat("\n First argument is", argumentOne, "\n")
-  cat("\n Second argument is", argumentTwo, "\n")
-  argumentThree <- argumentTwo + 1
-  cat("\n Second argument + 1 is", argumentThree, "\n")
-  return(argumentThree)
-}
-
 # [END] written by Ruoxuan Wang

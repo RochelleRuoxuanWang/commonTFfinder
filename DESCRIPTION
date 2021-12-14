@@ -1,11 +1,11 @@
 Package: commonTFfinder
 Type: Package
-Title: Find Common Transcription Factors and Binding Sites
+Title: Find Common Transcription Factor Binding Sites
 Version: 0.1.0
 Authors@R: person("R", "Wang", email = "rochelle.wang@mail.utoronto.ca", role = c("aut", "cre"))
 Maintainer: R Wang <rochelle.wang@mail.utoronto.ca>
-Description: Identifies common transcription factor (TF) binding sites along with the associated TF from user provided ChIP-seq data.
-    Use four spaces when indenting paragraphs within the Description.
+Description: Identifies common transcription factor (TF) binding sites from user provided ChIP-seq data.
+    Some functionality still in development.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -19,3 +19,6 @@ Config/testthat/edition: 3
 VignetteBuilder: knitr
 Depends: 
     R (>= 2.10)
+Imports: 
+    graphics,
+    GenomicRanges
