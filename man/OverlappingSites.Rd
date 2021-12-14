@@ -19,6 +19,13 @@ in both sets of data
 \description{
 Plots information criteria values given numeric information criteria
 values.
+Developmental Notes:
+Use these packages once figure out problem
+importFrom BSgenome.Mmusculus.UCSC.mm8 BSgenome.Mmusculus.UCSC.mm8
+importFrom BSgenome.Hsapiens.UCSC.hg19 BSgenome.Hsapiens.UCSC.hg19
+importFrom BSgenome.Hsapiens.UCSC.hg38 BSgenome.Hsapiens.UCSC.hg38
+importFrom BSgenome.Mmusculus.UCSC.mm9 BSgenome.Mmusculus.UCSC.mm9
+importFrom BSgenome.Mmusculus.UCSC.mm10 BSgenome.Mmusculus.UCSC.mm10
 }
 \examples{
 

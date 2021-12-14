@@ -17,3 +17,19 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(commonTFfinder)
 ```
+
+To list all functions available in the package:
+```{r}
+ls("package:commonTFfinder")
+```
+
+To list all datasets available in the package:
+```{r}
+data(package = "commonTFfinder")
+```
+
+## Workflow
+This package is intended to compare sequences of interest from ChIP-seq data. However, some functions have not been developed, so only certain types of analysis are possible.
+
+
+
